@@ -20,5 +20,7 @@ import myblog.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',myblog.views.home, name="home"),
-    path('blog/<int:blog_id>',myblog.views.detail, name="detail")
+    path('blog/<int:blog_id>',myblog.views.detail, name="detail"),
+    path('blog/new/', myblog.views.new, name="new"),
+    path('blog/create', myblog.views.create, name="create"),
 ]
