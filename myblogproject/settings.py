@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myblog.apps.MyblogConfig'
+    'myblog.apps.MyblogConfig',
+    'portfolio.apps.PortfolioConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRES = [
+    os.path.join(BASE_DIR, 'portfolio', 'static')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
